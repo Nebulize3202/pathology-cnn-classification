@@ -26,26 +26,35 @@ Clone this repository:
 DATA ACCESS GUIDE
 
 1. Mount Google Drive first
+```
 from google.colab import drive
 drive.mount('/content/drive')
+```
 
 2. Import Libraries
-import os
+```import os
 import numpy as np
 import matplotlib.pyplot as plt
 import h5py
 import pandas as pd
 from PIL import Image
 import tqdm as tqdm
+```
 
 3. Define paths
+```
 RESULTS_PATH = '/content/drive/MyDrive/pathology_cnn_project/results'
+```
 
 4. Load train/val/test split
+```
 train_df = pd.read_csv(f'{RESULTS_PATH}/breakhis_train_split.csv')
 val_df = pd.read_csv(f'{RESULTS_PATH}/breakhis_val_split.csv')
 test_df = pd.read_csv(f'{RESULTS_PATH}/breakhis_test_split.csv')
+```
 
+```
 print(f"Train: {{len(train_df)}} images")
 print(f"Val: {{len(val_df)}} images")
 print(f"Test: {{len(test_df)}} images")
+```
